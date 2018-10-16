@@ -37,26 +37,32 @@ a {
     a {
         display: inline;
     }
+    body {
+        margin: 10px;
+    }
     .container {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(300px, 1fr);
-    grid-template-areas: 
+        /* grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(200px, 1fr);
+        grid-template-areas: 
         "header header header"
         "main main aside"
         "img img img"
-        "img4 content content"
+        "img4 content content" */
+        /* grid-template-columns: repeat(3,1fr); */
+
     }
-    header {
-        grid-area: header;
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 20px;
     }
     main {
-        grid-area: main;
+        grid-column: span 2;
+        /* spans 2 columns and leaves the other space */
     }
-    aside {
-        grid-area: aside;
+    footer p {
+        grid-column: span 2;
     }
-    section {
-        grid-area: img;
-    }
+    
 }
